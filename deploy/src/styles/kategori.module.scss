@@ -1,0 +1,84 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+
+    h1 {
+      color: #1e293b;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .refreshBtn {
+      background-color: #0ea5e9; // Biru
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #0284c7;
+        transform: translateY(-2px);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-left: 6px solid #10b981; // Aksen Hijau
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .categoryBadge {
+        background-color: #ecfdf5;
+        color: #059669;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.25rem 0.75rem;
+        border-radius: 99px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 1rem 0 0.5rem;
+        color: #334155;
+        text-transform: capitalize;
+      }
+
+      .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #0ea5e9;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
